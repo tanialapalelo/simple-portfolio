@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Simple Portfolio
 
-First, run the development server:
+This is a personal portfolio website built with **Next.js**. It serves as a platform to showcase my work, interests, and experiences, including frontend development, dance, and English teaching. The portfolio is designed to highlight my skills and allow visitors to explore my projects, blog posts, and social media content.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Responsive Design**: The portfolio is fully responsive and works seamlessly across different devices and screen sizes.
+- **Dynamic Content**: Content such as blog posts and dance videos is fetched dynamically, allowing for easy updates and management.
+- **Smooth Animations**: Framer Motion is used for smooth animations throughout the website.
+- **Blog Section**: A blog section where I share insights about frontend development, programming, and self-improvement.
+- **Dance Journey**: A section showcasing my dance journey, including YouTube videos and links to my dance-related content.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: Framework for building the website and handling routing.
+- **React**: Library for building the user interface.
+- **Framer Motion**: For adding smooth animations to the pages.
+- **Tailwind CSS**: For styling and creating responsive layouts.
+- **Medium**: To embed my blog posts and share knowledge on coding and life improvement topics.
 
-## Learn More
+## How to Run Locally
 
-To learn more about Next.js, take a look at the following resources:
+To run this project locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/yourusername/simple-portfolio.git
+   ```
 
-## Deploy on Vercel
+2. Navigate to the project directory:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   cd simple-portfolio
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and go to `http://localhost:3000` to view the site.
+
+## How to Contribute
+
+Feel free to fork this repository and create pull requests if you'd like to contribute improvements, bug fixes, or feature enhancements.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Social Media
+
+- [GitHub](https://github.com/tanialapalelo)
+- [Medium](https://medium.com/@tanialapalelo)
+- [TikTok](https://www.tiktok.com/@tanialapalelo)
+- [Instagram](https://www.instagram.com/t.x.z.y)
+
+---
+
+Thank you for visiting my portfolio! 🚀
