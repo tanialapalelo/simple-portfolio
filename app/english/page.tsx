@@ -1,5 +1,7 @@
 "use client";
 
+import EnglishIdioms from "@/components/EnglishIdiom";
+import Explore from "@/components/Explore";
 import { englishBio, englishTips } from "@/constants/english";
 import Link from "next/link";
 
@@ -56,31 +58,9 @@ export default function EnglishPage() {
         </p>
       </section>
 
-      {/* English Tips Section */}
-      <section className="text-center">
-        <h2 className="text-2xl font-semibold mb-6">Simple English Phrases</h2>
-        <div className="space-y-4">
-          {englishTips.map((tip) => (
-            <div key={tip.id} className="p-4 border rounded-lg shadow-md">
-              <p className="text-xl font-semibold">{tip.phrase}</p>
-              <p className="text-lg text-gray-600">{tip.translation}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <EnglishIdioms/>
 
-      {/* Explore More */}
-      <section className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">Explore More</h2>
-        <div className="flex justify-center gap-4">
-          <Link href="/tech" className="px-6 py-2 bg-gray-100 rounded-xl hover:bg-gray-200">
-            Tech
-          </Link>
-          <Link href="/dance" className="px-6 py-2 bg-gray-100 rounded-xl hover:bg-gray-200">
-            Dance
-          </Link>
-        </div>
-      </section>
+      <Explore currentPage="english" />
     </main>
   );
 }

@@ -16,8 +16,30 @@ export const englishBio = {
     },
   };
   
-  export const englishTips = [
-    { id: 1, phrase: "How are you?", translation: "Bagaimana kabarmu?" },
-    { id: 2, phrase: "Good morning!", translation: "Selamat pagi!" },
+  export const englishIdioms = [
+    {
+      id: 1,
+      idiom: "Break the ice",
+      meaning: "To initiate conversation in a social setting."
+    },
+    {
+      id: 2,
+      idiom: "Bite the bullet",
+      meaning: "To endure something painful or unpleasant that is unavoidable."
+    },
+    {
+      id: 3,
+      idiom: "Burn the midnight oil",
+      meaning: "To work late into the night."
+    },
+    {
+      id: 4,
+      idiom: "A blessing in disguise",
+      meaning: "Something that seems bad or unlucky at first, but results in something good."
+    },
+    {
+      id: 5,
+      idiom: "Hit the nail on the head",
+      meaning: "To describe exactly what is causing a situation or problem."
+    }
   ];
-  

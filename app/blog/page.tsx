@@ -1,10 +1,11 @@
 
+import Explore from "@/components/Explore";
 import { blogData } from "@/constants/blog";
 import React from "react";
 
 const BlogPage = () => {
   return (
-    <main className="px-6 py-12 mx-auto max-w-screen-xl">
+    <main className="px-6 py-12 mx-auto max-w-screen-xl space-y-20">
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold">My Blog</h1>
         <p className="text-lg max-w-2xl mx-auto mt-4">
@@ -30,6 +31,8 @@ const BlogPage = () => {
           ))}
         </div>
       </section>
+      
+      <Explore currentPage="blog" />
     </main>
   );
 };

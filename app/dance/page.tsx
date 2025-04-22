@@ -8,6 +8,7 @@ import {
   youtubeVideoId,
   youtubeChannelUrl,
 } from "@/constants/dance";
+import Explore from "@/components/Explore";
 
 export default function DancePage() {
   return (
@@ -15,7 +16,7 @@ export default function DancePage() {
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-4xl font-bold">Dance with Tania</h1>
-        <p className="text-lg max-w-2xl mx-auto mt-4">{aboutDance.intro}</p>
+        <p className="text-lg max-w-2xl mx-auto mt-4">{aboutDance}</p>
       </section>
 
       {/* YouTube Highlight Section */}
@@ -27,7 +28,6 @@ export default function DancePage() {
             height="315"
             src={`https://www.youtube.com/embed/${youtubeVideoId}`}
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
@@ -48,21 +48,13 @@ export default function DancePage() {
       {/* Dance Reels */}
       <section className="text-center">
         <h2 className="text-2xl font-semibold mb-6">Dance Reels</h2>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-6">
           {danceVideos.map((video) => (
-            <a
+            <div
               key={video.id}
-              href={video.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full max-w-xs border rounded-lg overflow-hidden shadow"
-            >
-              <div className="aspect-w-9 aspect-h-16">
-                <div className="bg-gray-200 flex items-center justify-center h-64 text-gray-500">
-                  {video.platform}
-                </div>
-              </div>
-            </a>
+              className="w-full max-w-md rounded-xl overflow-hidden shadow bg-white p-4"
+              dangerouslySetInnerHTML={{ __html: video.embed }}
+            />
           ))}
         </div>
       </section>
@@ -70,7 +62,6 @@ export default function DancePage() {
       {/* Dance Journey */}
       <section className="text-center">
         <h2 className="text-2xl font-semibold mb-6">My Dance Journey</h2>
-        <p className="text-lg max-w-2xl mx-auto mb-6">{aboutDance.journey}</p>
         <div className="space-y-4">
           {danceMilestones.map((item) => (
             <div key={item.id} className="border rounded-lg p-6 shadow-sm">
@@ -81,24 +72,7 @@ export default function DancePage() {
         </div>
       </section>
 
-      {/* Explore More */}
-      <section className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">Explore More</h2>
-        <div className="flex justify-center gap-4">
-          <Link
-            href="/tech"
-            className="px-6 py-2 bg-gray-100 rounded-xl hover:bg-gray-200"
-          >
-            Tech
-          </Link>
-          <Link
-            href="/english"
-            className="px-6 py-2 bg-gray-100 rounded-xl hover:bg-gray-200"
-          >
-            English
-          </Link>
-        </div>
-      </section>
+      <Explore currentPage="dance" />
     </main>
   );
 }
