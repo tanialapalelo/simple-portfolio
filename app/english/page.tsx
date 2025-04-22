@@ -2,7 +2,7 @@
 
 import EnglishIdioms from "@/components/EnglishIdiom";
 import Explore from "@/components/Explore";
-import { englishBio, englishTips } from "@/constants/english";
+import { englishBio } from "@/constants/english";
 import Link from "next/link";
 
 export default function EnglishPage() {

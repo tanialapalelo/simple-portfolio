@@ -1,10 +1,7 @@
 import Hero from "@/components/Hero";
-import HighlightCard from "@/components/HighlightCard";
-import Link from "next/link";
 import SocialMediaLinks from "@/components/SocialMediaLinks";
 import About from "@/components/About";
 import Highlight from "@/components/Highlight";
-import Explore from "@/components/Explore";
 
 export default function HomePage() {
   return (

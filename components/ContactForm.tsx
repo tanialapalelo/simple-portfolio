@@ -22,7 +22,7 @@ const ContactForm = () => {
 
     if (!recaptchaValue) {
       // toast.error("Please verify you're not a robot.");
-      error("Please verify you're not a robot.");
+      console.error("Please verify you're not a robot.");
       return;
     }
 
