@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-// import { toast } from "sonner";
+import { toast } from "sonner";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -21,13 +21,12 @@ const ContactForm = () => {
     e.preventDefault();
 
     if (!recaptchaValue) {
-      // toast.error("Please verify you're not a robot.");
+      toast.error("Please verify you're not a robot.");
       console.error("Please verify you're not a robot.");
       return;
     }
 
     setIsSubmitting(true);
-    // toast.loading("Sending message...");
     console.log("Sending message...");
 
     try {
@@ -38,18 +37,18 @@ const ContactForm = () => {
       });
 
       if (res.ok) {
-        // toast.success("Message sent!");
+        toast.success("Message sent!");
         console.log("Message sent!");
         
         setFormData({ name: "", email: "", message: "" });
         setRecaptchaValue(null);
       } else {
-        // toast.error("Something went wrong. Please try again.");
+        toast.error("Something went wrong. Please try again.");
         console.error("Error:", res.statusText);
         
       }
     } catch (err) {
-      // toast.error("Failed to send message. Please try again later.");
+      toast.error("Failed to send message. Please try again later.");
       console.error("Error:", err);
     } finally {
       setIsSubmitting(false);

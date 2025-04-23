@@ -18,19 +18,11 @@ export default function EnglishPage() {
       {/* YouTube Videos */}
       <section className="text-center">
         <h2 className="text-2xl font-semibold mb-6">English Learning Videos</h2>
-        <div className="space-y-4">
-          <iframe
-            width="560"
-            height="315"
-            src={`https://www.youtube.com/embed/${englishBio.youtube.embedId}`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="mx-auto"
-          ></iframe>
+        <div className="p-6 border border-dashed border-gray-300 rounded-lg max-w-xl mx-auto">
+          <p className="text-gray-500 text-lg">🎬 Coming Soon!</p>
+          <p className="text-sm text-gray-400 mt-2">Stay tuned for my first YouTube video on learning English. It'll be worth the wait!</p>
         </div>
-        <p className="mt-4 text-gray-500">
+        <p className="mt-6 text-gray-500">
           Subscribe to my channel 👉{" "}
           <Link
             href={englishBio.youtube.link}
@@ -58,7 +50,7 @@ export default function EnglishPage() {
         </p>
       </section>
 
-      <EnglishIdioms/>
+      <EnglishIdioms />
 
       <Explore currentPage="english" />
     </main>

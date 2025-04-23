@@ -34,10 +34,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 });
     }
 
-    // Step 3: Send email using Resend if reCAPTCHA is valid
+    // Ensure the contact email is defined
+    const contactEmail = process.env.CONTACT_EMAIL || 'defaultemail@example.com'; // Fallback email
+
+    // Send email using Resend if reCAPTCHA is valid
     await resend.emails.send({
-      from: 'Tania Contact <hello@tania.dev>', // Should match your verified domain
-      to: 'yourpersonal@email.com', // Replace with your email
+      from: process.env.RESEND_FROM_EMAIL!,
+      to: contactEmail, // Ensures it's always a string
       subject: `Message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
