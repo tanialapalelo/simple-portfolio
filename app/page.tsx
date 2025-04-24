@@ -5,7 +5,7 @@ import Highlight from "@/components/Highlight";
 
 export default function HomePage() {
   return (
-    <main className="px-6 py-12 mx-auto space-y-20 max-w-5xl">
+    <main className="px-6 py-12 mx-auto space-y-20 scroll-smooth">
       <Hero />
       <About />
       <Highlight />

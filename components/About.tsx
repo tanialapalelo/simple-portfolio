@@ -11,7 +11,7 @@ const About = () => {
           alt={aboutContent.imageAlt}
           width={128}
           height={128}
-          className="rounded-full border-4 border-gray-200 object-cover"
+          className="rounded-full border-4 border-gray-200 object-cover transform hover:scale-105 transition-transform duration-300"
         />
       </div>
       <p className="text-lg max-w-2xl mx-auto">

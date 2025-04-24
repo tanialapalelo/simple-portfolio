@@ -17,7 +17,7 @@ const SocialMediaLinks = () => {
             rel="noopener noreferrer"
             aria-label={label}
             title={label}
-            className="hover:text-gray-700 transition-all"
+            className="hover:text-gray-700 transform hover:scale-110 transition-transform duration-300"
           >
             <Icon />
           </Link>

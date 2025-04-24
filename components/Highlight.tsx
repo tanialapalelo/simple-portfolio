@@ -15,6 +15,7 @@ const Highlight = () => {
             href={highlight.href}
             tag={highlight.tag}
             description={highlight.description}
+            className="transform hover:scale-105 transition-transform duration-300"
           />
         ))}
       </div>
