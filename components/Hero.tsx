@@ -5,9 +5,15 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-const TypingEffect = ({ words, typeSpeed = 100, deleteSpeed = 50, delay = 1000 }) => {
+type TypingEffectProps = {
+  words: string[];
+  typeSpeed?: number;
+  deleteSpeed?: number;
+  delay?: number;
+};
+
+const TypingEffect: React.FC<TypingEffectProps> = ({ words, typeSpeed = 100, deleteSpeed = 50, delay = 1000 }) => {
   const [text, setText] = useState("");
-  const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [loop, setLoop] = useState(0);
 
